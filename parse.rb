@@ -4,8 +4,8 @@ require 'pry-byebug'
 res = []
 
 Dir.glob('./glucose/*').each do |file|
-  open(file) { |io| JSON.load io }.each.with_index(0) do |object, i|
-    if i > 1 && object['type'] == 'message'
+  open(file) { |io| JSON.load io }.each do |object|
+    if object['type'] == 'message' && !object['text'].include?('channel')
       if object['file'].nil?
         item = {
           timestamp: object.dig('ts').to_i.floor,

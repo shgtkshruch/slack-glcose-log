@@ -19,7 +19,6 @@ import meals from '../assets/meal.json'
 import moment from 'moment'
 import event from '../event'
 
-console.log(meals)
 export default {
   data () {
     return {
