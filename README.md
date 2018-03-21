@@ -2,6 +2,12 @@
 
 > A Vue.js project
 
+## parse
+
+```sh
+bundle exec ruby parse.rb
+```
+
 ## Build Setup
 
 ``` bash
