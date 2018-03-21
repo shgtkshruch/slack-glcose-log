@@ -7,7 +7,7 @@
             <time class="time">{{ dateTime(meal.timestamp) }}</time>
             <p class="title">{{ meal.title }}</p>
           </div>
-          <img :src= meal.image />
+          <img :src= meal.image v-if="meal.image.length > 0"/>
         </el-card>
       </li>
     </ul>
@@ -19,6 +19,7 @@ import meals from '../assets/meal.json'
 import moment from 'moment'
 import event from '../event'
 
+console.log(meals)
 export default {
   data () {
     return {
@@ -52,6 +53,7 @@ ul {
 }
 
 li {
+  width: 100%;
   display: inline-block;
   margin: 2rem 0;
 }
@@ -70,5 +72,9 @@ img {
   font-size: 0.9rem;
   letter-spacing: 0.05em;
   color: #6b6b6b;
+}
+
+.el-card__body:empty {
+  display: none;
 }
 </style>
