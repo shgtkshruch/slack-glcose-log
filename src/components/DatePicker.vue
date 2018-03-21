@@ -41,9 +41,7 @@ header {
   position: fixed;
   top: 0;
   left: 0;
-  width: 100%;
-  padding: 1rem 0;
-  background-color: #fff;
-  box-shadow: 0 2px 12px 0 rgba(0,0,0,.1);
+  width: 40%;
+  margin-top: 2rem;
 }
 </style>
