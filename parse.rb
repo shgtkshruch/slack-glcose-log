@@ -16,5 +16,6 @@ Dir.glob('./glucose/*').each do |file|
   end
 end
 
-binding.pry
-p 'end'
+File.open('meal.json', 'w') do |f|
+  f.puts res.to_json
+end
