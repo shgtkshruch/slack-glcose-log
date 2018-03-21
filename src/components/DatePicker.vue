@@ -30,6 +30,7 @@ export default {
         to += 60 * 60 * 24
       }
       event.$emit('dateChange', from, to)
+      window.scrollTo(0, 0)
     }
   }
 }
