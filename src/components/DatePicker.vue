@@ -21,8 +21,11 @@ export default {
   },
   methods: {
     change () {
-      const from = moment(this.date[0]).valueOf() / 1000
-      const to = moment(this.date[1]).valueOf() / 1000
+      let from = moment(this.date[0]).valueOf() / 1000
+      let to = moment(this.date[1]).valueOf() / 1000
+      if (from === to) {
+        to += 60 * 60 * 24
+      }
       event.$emit('dateChange', from, to)
     }
   }
