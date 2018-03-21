@@ -2,9 +2,13 @@
   <div class="hello">
     <ul>
       <li v-for="meal in meals" :key=meal.timestamp v-show="isShow(meal)">
-        <p>{{ dateTime(meal.timestamp) }}</p>
-        <p>{{ meal.title }}</p>
-        <img :src= meal.image />
+        <el-card class="card">
+          <div slot="header" class="clearfix">
+            <time class="time">{{ dateTime(meal.timestamp) }}</time>
+            <p class="title">{{ meal.title }}</p>
+          </div>
+          <img :src= meal.image />
+        </el-card>
       </li>
     </ul>
   </div>
@@ -45,15 +49,26 @@ ul {
   list-style-type: none;
   padding: 0;
   font-family: 'Helvetica Neue', YuGothic;
-  letter-spacing: 0.05em;
 }
 
 li {
   display: inline-block;
-  margin: 0 10px;
+  margin: 2rem 0;
 }
 
 img {
   max-width: 100%;
+}
+
+.title {
+  margin: 0.8rem 0 0;
+  font-weight: bold;
+  font-size: 1.3rem;
+}
+
+.time {
+  font-size: 0.9rem;
+  letter-spacing: 0.05em;
+  color: #6b6b6b;
 }
 </style>
