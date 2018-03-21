@@ -23,8 +23,8 @@ export default {
   data () {
     return {
       meals,
-      from: '',
-      to: ''
+      from: '1520467200',
+      to: '1521676800'
     }
   },
   created () {
