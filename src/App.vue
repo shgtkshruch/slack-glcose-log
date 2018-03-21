@@ -20,7 +20,7 @@ export default {
 <style>
 .app {
   max-width: 30rem;
-  margin: 3rem auto;
+  margin: 5rem auto;
   text-align: center;
 }
 </style>

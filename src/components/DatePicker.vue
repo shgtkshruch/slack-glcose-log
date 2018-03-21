@@ -1,12 +1,15 @@
 <template>
-  <el-date-picker
-    @change="change"
-    v-model="date"
-    type="daterange"
-    range-separator="To"
-    start-placeholder="Start date"
-    end-placeholder="End date">
-  </el-date-picker>
+  <header>
+    <el-date-picker
+      @change="change"
+      v-model="date"
+      type="daterange"
+      range-separator="To"
+      start-placeholder="Start date"
+      end-placeholder="End date"
+      class="date-picker" >
+    </el-date-picker>
+  </header>
 </template>
 
 <script>
@@ -31,3 +34,15 @@ export default {
   }
 }
 </script>
+
+<style>
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 1rem 0;
+  background-color: #fff;
+  box-shadow: 0 2px 12px 0 rgba(0,0,0,.1);
+}
+</style>
